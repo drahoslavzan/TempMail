@@ -53,6 +53,7 @@ sub new
 					requests_redirectable => [ 'GET', 'HEAD', 'POST' ],
 			),
 			_address => '',
+			_inbox   => [],
 	};
 
 	$self->{_ua}->cookie_jar( {} );
@@ -61,7 +62,7 @@ sub new
 
 	bless $self, $class;
 
-	$self->setAddress($address) if defined($address);
+	$self->setAddress($address) if defined $address;
 
 	return $self;
 }
@@ -96,7 +97,7 @@ sub user
 	
 	$address =~ /(.*)@/;
 
-	return $1 if defined $1;
+	return $1;
 }
 
 sub dispose
@@ -154,23 +155,26 @@ sub inbox
 
 	my ($t) = $te->tables;
 
-	my @out;
+	my @inbox = @{$self->{_inbox}};
+
+	@inbox = ();
+
 	if(defined($t))
 	{
 		foreach my $r ($t->rows)
 		{
 			my $sender  = @$r[0];
 
-			@$r[1] =~ m/href="(.*?)".*>(.*?)</;
+			@$r[1] =~ m/href="(.*?)".*?>(.*?)</;
 
 			my $subject = $2;
 			my $url     = $1;
 
-			push(@out, { sender => $sender, subject => $subject, url => $url });
+			push(@inbox, { sender => $sender, subject => $subject, url => $url });
 		}
 	}
 
-	wantarray ? @out : \@out;
+	wantarray ? @inbox : \@inbox;
 }
 
 sub refresh
@@ -187,3 +191,4 @@ sub refresh
 
 
 return 1;
+
