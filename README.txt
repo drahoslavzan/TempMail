@@ -1,17 +1,25 @@
 Mail/Webmail/TempMail.pm is Copyright (C) 2014, Drahoslav Zan.
 
-# ==================================================================
+This module is free software; you
+can redistribute it and/or modify it under the same terms
+as Perl 5.10.0.
 
-# NAME:
-# -----
+This program is distributed in the hope that it will be
+useful, but without any warranty; without even the implied
+warranty of merchantability or fitness for a particular purpose.
 
-# Mail::Webmail::TempMail - Perl module providing API for accessing
-# "temp-mail.org" service.
+====================================================================
 
-# ==================================================================
+NAME:
+-----
 
-# SYNOPSIS:
-# ---------
+Mail::Webmail::TempMail - Perl module providing API for accessing
+"temp-mail.org" service.
+
+====================================================================
+
+SYNOPSIS:
+---------
 
 use strict;
 use warnings;
@@ -32,7 +40,7 @@ $mail->addHour;
 print "Time [s] = " . $mail->refresh . "\n";
 
 # Set mail address to an existing one, inbox stay intact
-# until time expire or user dispose mail address.
+# until time expiration.
 
 $mail->setAddress('jikoxafove@solvemail.info');
 
@@ -54,5 +62,5 @@ foreach my $m (@inbox)
 
 $mail->dispose;
 
-# ==================================================================
+====================================================================
 
