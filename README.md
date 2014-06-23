@@ -1,26 +1,16 @@
-Mail/Webmail/TempMail.pm is Copyright (C) 2014, Drahoslav Zan.
+Perl Module Providing API for Accessing [temp-mail.org] Service
+===============================================================
 
-This module is free software; you
-can redistribute it and/or modify it under the same terms
-as Perl 5.10.0.
-
-This program is distributed in the hope that it will be
-useful, but without any warranty; without even the implied
-warranty of merchantability or fitness for a particular purpose.
-
-====================================================================
-
-NAME:
------
+### NAME:
 
 Mail::Webmail::TempMail - Perl module providing API for accessing
 "temp-mail.org" service.
 
 ====================================================================
 
-SYNOPSIS:
----------
+### SYNOPSIS:
 
+~~~Perl
 use strict;
 use warnings;
 
@@ -61,6 +51,5 @@ foreach my $m (@inbox)
 # Delete all messages and dispose mail address.
 
 $mail->dispose;
-
-====================================================================
+~~~
 
