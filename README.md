@@ -1,5 +1,5 @@
-Perl Module Providing API for Accessing [temp-mail.org]() Service
-=================================================================
+Perl Module Providing API for Accessing [temp-mail.org](http://temp-mail.org) Service
+=====================================================================================
 
 ### NAME:
 
