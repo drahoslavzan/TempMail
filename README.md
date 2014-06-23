@@ -1,11 +1,11 @@
-Perl Module Providing API for Accessing "temp-mail.org" Service
-===============================================================
+Perl Module Providing API for Accessing [temp-mail.org][tm] Service
+===================================================================
 
 
 ### NAME:
 
 > Mail::Webmail::TempMail - Perl module providing API for accessing
-> [temp-mail.org](http://temp-mail.org) service.
+> [temp-mail.org][tm] service.
 
 
 ### SYNOPSIS:
@@ -53,3 +53,4 @@ foreach my $m (@inbox)
 $mail->dispose;
 ~~~
 
+[tm]: http://temp-mail.org "TempMail"
