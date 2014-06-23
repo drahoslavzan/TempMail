@@ -1,12 +1,12 @@
-Perl Module Providing API for Accessing [temp-mail.org](http://temp-mail.org) Service
-=====================================================================================
+Perl Module Providing API for Accessing "temp-mail.org" Service
+===============================================================
+
 
 ### NAME:
 
 Mail::Webmail::TempMail - Perl module providing API for accessing
-"temp-mail.org" service.
+[temp-mail.org](http://temp-mail.org) service.
 
-====================================================================
 
 ### SYNOPSIS:
 
